@@ -18,6 +18,12 @@ grunt.loadNpmTasks('grunt-front-end-modules');
 ```
 
 ## The "front_end_modules" task
+This task allows you to use npm to manage front-end dependencies on your project.  It will copy files out of installed
+packages to other areas of your project such as a `libs` directory.  It was inspired by this vision of 
+[npm and front-end packaging](http://blog.npmjs.org/post/101775448305/npm-and-front-end-packaging).
+
+It will honor the `main` file specified in a dependent module's `package.json` or you can configure a package
+specific key.  You can also exercise full control over what files are copied via the gruntjs file configuration formats.
 
 ### Overview
 In your project's Gruntfile, add a section named `front_end_modules` to the data object passed into `grunt.initConfig()`.
